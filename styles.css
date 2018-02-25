@@ -6,16 +6,42 @@
 */
 
 /* Global styles */
+/* border box fix */
+html {
+  box-sizing: border-box;
+}
+  *, *:before, *:after {
+  box-sizing: inherit; /*read about this fix from Paul Iris*/
+}
 body { font-family: 'Open Sans', sans-serif;
+      margin: 0;
 }
 h1, h2 {
   font-family: 'Caveat', cursive;
+  font-weight: 400;
 }
 h1 {
   font-size: 80px;
 }
 h2 {
-  font-size: 30px;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+/* Use margin to center align content blocks regardless of size of browser */
+.content-wrap {
+  max-width: 950px; /* dont use width px (absolute), use max-width for size responsive page */
+  margin: 0 auto;
+  padding: 50px;
+  overflow: auto;
+}
+.col-narrow {
+  width: 30%;
+  float:left;
+}
+.col-wide {
+  width: 70%;
+  float: left;
 }
 /*makes all links red */
 a {
@@ -32,12 +58,24 @@ header, footer {
   background-color: #2B2D42;
   color: #8D99AE;
 }
-
-/* only select h1 h2 in header element */
+/* Header */
 header h1, header h2 {
-  color: #EDF2F4;
+  color: #EDF2F4; /* only select h1 h2 in header element */
+  margin: 0;
 }
 
+.profile-img {
+  border-radius: 50%;
+}
+
+/* footer */
+footer {
+  text-align: center;
+}
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+}
 
 /* Work Experience */
 .work {
